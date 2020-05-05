@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Real News App</string>
+
+    <string name="headlines">Headlines</string>
+    <string name="medicine">Medicine</string>
+    <string name="sports">Sports</string>
+    <string name="tech">Tech</string>
+    <string name="economics">Economics</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
