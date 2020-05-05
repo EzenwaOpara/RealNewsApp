@@ -9,21 +9,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import com.benjamin.realnewsapp.R;
-import com.benjamin.realnewsapp.model.APIInterface;
-import com.benjamin.realnewsapp.model.NewsResults;
 import com.benjamin.realnewsapp.categories.*;
-
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     private class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        public SectionsPagerAdapter(FragmentManager fm) {
+        private SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
@@ -91,32 +79,3 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-
-
-//
-//
-//        call.enqueue(new Callback<NewsResults>() {
-//            @Override
-//            public void onResponse(Call<NewsResults> call, Response<NewsResults> response) {
-//
-//                String[] news = new String[listOfHeadlines.size()];
-//                for (int i = 0; i < listOfHeadlines.size(); i++){
-//                    NewsResults.ArticlesBean currentNews = listOfHeadlines.get(i);
-//                    news[i] = (currentNews.getTitle());
-//                }
-//                ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this,
-//                        android.R.layout.simple_list_item_1, news);
-//
-//                ListView listView = findViewById(R.id.list_item_main);
-//                listView.setAdapter(adapter);
-//
-//            }
-//
-//            @Override
-//            public void onFailure(Call<NewsResults> call, Throwable t) {
-//
-//            }
-//        });
-//
-//    }
-//}
